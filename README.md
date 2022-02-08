@@ -10,7 +10,7 @@ Brush up your data structure and algorithms skills in python and get ready for y
  - [Strings](https://github.com/rusuraluca/python_interview_prep/blob/main/Strings/Strings.md)
 
  ## Problems
-  - [Strings](https://github.com/rusuraluca/python_interview_prep/blob/main/Strings/problems)
+ - [Strings](https://github.com/rusuraluca/python_interview_prep/tree/main/Strings/Problems)
 
 
 ## Get to know me
