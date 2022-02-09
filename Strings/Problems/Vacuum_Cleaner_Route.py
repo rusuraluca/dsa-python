@@ -25,6 +25,9 @@ True
 # if it goes once up, it must go once down in order to come back
 # With 4 variables we keep track of the moves
 # and at each step if a "come-back" moves comes we eliminate it from the move
+# If in the end all the variables are back to 0, the initialization number
+# then the robot comes back to the start
+# otherwise it doesn't
 # Complexity: O(n) - n in the number of moves the robot makes
 def vacuum_cleaner(route):
     left, right, down, up = 0, 0, 0, 0
