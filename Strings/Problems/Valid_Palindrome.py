@@ -133,32 +133,3 @@ def valid_palindrome_variable(string):
 # Test
 s = "A man, a plan, a canal: Panama."
 print(valid_palindrome_variable(s))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -56,4 +56,3 @@ s = "URURDLLD"
 print(vacuum_cleaner(s))
 s = "RUULLDRD"
 print(vacuum_cleaner(s))
-
