@@ -142,4 +142,3 @@ print(unique_sorted_comparison(s))
 
 s = "xael"
 print(unique_sorted_comparison(s))
-
