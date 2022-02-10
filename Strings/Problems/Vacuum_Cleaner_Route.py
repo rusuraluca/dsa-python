@@ -18,7 +18,9 @@ True
 """
 
 
-# Method
+# Track moves
+# Time Complexity: O(n) - where n is the number of moves the robot makes
+# Space Complexity: O(1)
 # For every move the vacuum makes, there needs to be a "come-back" move
 # If it goes once to the left, it must go once to the right in order to come back
 # and
@@ -28,7 +30,6 @@ True
 # If in the end all the variables are back to 0, the initialization number
 # then the robot comes back to the start
 # otherwise it doesn't
-# Complexity: O(n) - n in the number of moves the robot makes
 def vacuum_cleaner(route):
     left, right, down, up = 0, 0, 0, 0
 

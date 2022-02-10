@@ -13,8 +13,8 @@ False
 
 
 # Method with dictionary
-# Time Complexity: O(n), where n = the number of characters in the string
-# Space Complexity: O(n), where n = the number of characters in the string
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(n), where n is the number of characters in the string
 # Traverse the string one character at a time,
 # use a dictionary to store all its characters.
 # If a character is added more than once,
@@ -41,7 +41,7 @@ print(unique_dict(s))
 
 
 # Method with hash table
-# Time Complexity: O(n), where n = the number of characters in the string
+# Time Complexity: O(n), where n is the number of characters in the string
 # Space Complexity: O(1)
 # Assume the string will contain only ASCII characters.
 # Traverse the string one character at a time,
@@ -82,7 +82,7 @@ print(unique_hashtable(s))
 
 
 # Character comparisons
-# Time Complexity: O(n^2), where n = the number of characters in the string
+# Time Complexity: O(n^2), where n is the number of characters in the string
 # Space Complexity: O(1)
 def unique_comparison(string):
     for i in range(0, len(string)):
@@ -101,7 +101,7 @@ print(unique_comparison(s))
 
 
 # Sorted comparison
-# Time Complexity: O(n*log(n)), where n = the number of characters in the string
+# Time Complexity: O(n*log(n)), where n is the number of characters in the string
 # Space Complexity: O(1)
 # If we are allowed to modify the original string,
 # we could sort it in place in n*log(n) time and test consecutive characters for equality.

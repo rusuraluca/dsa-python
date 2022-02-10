@@ -17,6 +17,8 @@ true
 
 
 # Iterative method
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(1)
 # Run a loop from starting to length/2
 # and check the first character to the last character
 # of the string and second to second last one and so on ….
@@ -42,6 +44,8 @@ print(valid_palindrome_iterative(s))
 
 
 # Recursive method
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(1)
 # This method compares the first and the last element of the string
 # and gives the rest of the substring to a recursive call to itself.
 def valid_palindrome_recursive(string):
@@ -69,6 +73,8 @@ print(valid_palindrome_recursive(s))
 
 
 # Reverse string
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(1)
 # We reverse the string
 # and then check if the reverse and the original are the same or not
 # We reverse it by using the extended slice syntax
@@ -88,6 +94,8 @@ print(valid_palindrome_reverse_slice(s))
 
 
 # Reverse string
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(1)
 # We reverse it by using the reverse method ''.join(reversed(string))
 # We reverse the string
 # and then check if the reverse and the original are the same or not
@@ -111,6 +119,8 @@ print(valid_palindrome_reversed(s))
 
 
 # One extra variable method
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(1)
 # In this method, the user takes a character of string one by one
 # and store it in an empty variable.
 # After storing all the characters

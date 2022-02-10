@@ -20,14 +20,12 @@ hence knowing other methods to reverse string can prove to be useful.
 
 
 # Looping through
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(1)
 # We call the function to reverse a string,
 # which iterates through every element
 # and intelligently join each character in the beginning of a new string
 # so as to obtain the reversed string.
-
-# Complexity O(n), n - the number of characters in the string
-
-
 def reverse_looping(string):
     new_string = ""
     for char in string:
@@ -48,6 +46,8 @@ print(reverse_looping(s))
 
 
 # Recursion approach
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(1)
 # We call the function to reverse a string,
 # in which the string is passed as an argument to a recursive function to reverse the string.
 # In the function, the base condition is that if the length of the string is equal to 0,
@@ -55,7 +55,6 @@ print(reverse_looping(s))
 # If not equal to 0, the reverse function is recursively called
 # to slice the part of the string except the first character
 # and concatenate the first character to the end of the sliced string.
-
 def reverse_recursive(string):
     if len(string) == 0:
         return string
@@ -75,11 +74,12 @@ print(reverse_recursive(s))
 
 
 # Stack approach
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(n)
 # An empty stack is created.
 # One by one characters of string are pushed to stack.
 # One by one all characters from stack are popped,
 # and put them back to string.
-
 
 # function to create an empty stack
 # initializes size of stack as 0
@@ -140,6 +140,8 @@ print(reverse_stacking(s))
 
 
 # Extended slice syntax approach
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(1)
 # Extended slice offers to put a “step” field as [start,stop,step],
 # and giving no field as start and stop indicates default to 0
 # and string length respectively and “-1” denotes starting from end and stop at the start,
@@ -160,6 +162,8 @@ print(reverse_slice(s))
 
 
 # Reversed approach
+# Time Complexity: O(n), where n is the number of characters in the string
+# Space Complexity: O(1)
 # The reversed() returns the reversed iterator of the given string
 # and then its elements are joined empty string separated using join().
 # And reversed order string is formed.
