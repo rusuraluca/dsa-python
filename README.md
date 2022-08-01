@@ -1,7 +1,8 @@
-
 # Python DSA Interview Prep
 
-Brush up your data structure and algorithms skills in python and get ready for your next interview.
+Brush up your Data StructureS and Algorithms skills in Python and get ready for your next Interview.
+
+
 
 ## Data Structures
 + #### [Array](https://invented-oviraptor-ff0.notion.site/Array-282596d9e9db42eaaa9608044e64ed82)
@@ -19,7 +20,9 @@ Brush up your data structure and algorithms skills in python and get ready for y
 + #### [Graph](https://invented-oviraptor-ff0.notion.site/Graphs-6784a82bd03042e68e56f641430a56e3)
 + #### [Hash Table](https://invented-oviraptor-ff0.notion.site/Hash-Table-29c724c18caa455f9bf7a53a59057338)
 
-## Algorithms
+
+
+# Algorithms
 + #### [Searching](https://invented-oviraptor-ff0.notion.site/Searching-19e43d6771ba417388aabdc279689120)
 + #### [Sorting](https://invented-oviraptor-ff0.notion.site/Sorting-ffcedcdf5f88466cb676fe2499810c46)
 + #### [Mathematical]()
@@ -32,14 +35,17 @@ Brush up your data structure and algorithms skills in python and get ready for y
 
 
 
-# Problems
-
-## Patterns
+# Patterns
 + #### [Sliding Window](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Sliding%20Window)
 
 + #### [Two Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Two%20Pointers)
 
++ #### [Modified Binary Search](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Modified%20Binary%20Search)
+
 + #### [Fast & Slow Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Fast%26Slow%20Pointers)
+
++ #### [Tree Breadth First Search](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Tree%20Breadth%20First%20Search)
+
 
 # Let's connect
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ralucamariarusu/)
