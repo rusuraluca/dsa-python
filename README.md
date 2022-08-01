@@ -5,6 +5,7 @@ Brush up your data structure and algorithms skills in python and get ready for y
 
 
 # Theory
+#### [Notion Notebook](https://www.notion.so/Interview-prep-3241a4fe31ee4f5d92a17b6bf4993dd8)
 
 # Problems
 
