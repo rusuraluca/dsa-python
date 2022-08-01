@@ -15,6 +15,18 @@ Input:  text = aabaabaa, word = aaba
 Output: 4
 Explanation : Anagrams of the word aaba - aaba, abaa each appear twice in the text and hence the count is 4.
 
+Sliding-Window Solution:
+-----------------------------------------------
+Check all length-of-word windows in given string
+If one is anagram with the word
+    Increase Count
+Return Count
+
+@complexity:
+Time: O(n+w), where n is the number of characters in the input text string
+              where w is the number of characters in the input word string
+Space: O(1)
+
 
 Sliding-Window + Heap Solution:
 -----------------------------------------------
@@ -42,6 +54,10 @@ Space: O(1)
 
 class Solution:
     def countOccurrencesofAnagram(self, text, word):
+        # base case
+        if len(text) < len(word):
+            return 0
+
         # text chars heap
         tHeap = [0] * 26
         # word chars heap
@@ -65,7 +81,6 @@ class Solution:
 
         return count
 
-
     def countOccurrencesofAnagram2(self, text, word):
         def isAnagram(s, word):
             if len(s) != len(word):
@@ -81,6 +96,31 @@ class Solution:
 
             return True
 
+        # base case
+        if len(text) < len(word):
+            return 0
+
+        d = {}
+        count = 0
+        angr = ''
+
+        for i in range(len(word)):
+            angr += text[i]
+
+        if isAnagram(angr, word):
+            count += 1
+
+        for i in range(1, len(text)):
+            angr = angr[1:] + text[i]
+
+            if angr not in d and isAnagram(angr, word):
+                count += 1
+                d[angr] = 0
+
+            d[angr] = 0
+
+        return count
+
 
 class Tests:
     def __init__(self):
@@ -88,6 +128,10 @@ class Tests:
         assert s.countOccurrencesofAnagram("g", "got") == 0
         assert s.countOccurrencesofAnagram("gotxxotgxdogt", "got") == 3
         assert s.countOccurrencesofAnagram("aabaabaa", "aaba") == 2
+
+        assert s.countOccurrencesofAnagram2("g", "got") == 0
+        assert s.countOccurrencesofAnagram2("gotxxotgxdogt", "got") == 3
+        assert s.countOccurrencesofAnagram2("aabaabaa", "aaba") == 4
 
 
 t = Tests()
