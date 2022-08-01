@@ -1,8 +1,19 @@
 """
+Problem:
+-----------------------------------------------
 https://leetcode.com/problems/is-subsequence/
 
-Two Pointers Solution:
 
+Base Cases:
+-----------------------------------------------
+If len of substring > len of string => not valid
+If both empty => valid
+If string empty => not valid
+If substring empty => valid
+
+
+Two Pointers Solution:
+-----------------------------------------------
 @description
 t = "ahbgdc"
 s = "abc"
@@ -35,12 +46,6 @@ stop when
 - no more characters in the given string
 - no more characters to check in the subsequence
 
-@base cases:
-- if len of substring > len of string => not valid
-- if both empty => valid
-- if string empty => not valid
-- if substring empty => valid
-
 @pseudocode:
 check base cases
 traverse the char of the string
@@ -56,9 +61,10 @@ otherwise
 
 @complexity:
 Time:  O(n), n is the number of characters in the given string
-           , we only traverse once the given string
+             we only traverse once the given string
 Space: O(1), no auxiliary space needed
 """
+
 
 class Solution:
     def isSubsequence(self, s: str, sub: str) -> bool:
@@ -84,6 +90,11 @@ class Solution:
         return False
 
 
-s = Solution()
-assert s.isSubsequence("ahbgdc", "abc") == True
-assert s.isSubsequence("ahbgdc", "axc") == False
+class Tests:
+    def __init__(self):
+        s = Solution()
+        assert s.isSubsequence("ahbgdc", "abc") == True
+        assert s.isSubsequence("ahbgdc", "axc") == False
+
+
+t = Tests()

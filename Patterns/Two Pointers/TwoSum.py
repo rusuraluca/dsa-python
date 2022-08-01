@@ -123,6 +123,7 @@ Space:  O(n)    , the extra space required depends on the number of items stored
                   which stores at most n elements
 """
 
+
 class Solution:
     def twoSum2(self, arr, target):
         arr.sort()
@@ -153,15 +154,20 @@ class Solution:
         return []
 
 
-s = Solution()
+class Tests:
+    def __init__(self):
+        s = Solution()
 
-assert s.twoSum2([2, 7, 11, 15], 9) == [2, 7]
-assert s.twoSum2([2, 7, 11, 15], 17) == [2, 15]
-assert s.twoSum2([2, 7], 17) == []
+        assert s.twoSum2([2, 7, 11, 15], 9) == [2, 7]
+        assert s.twoSum2([2, 7, 11, 15], 17) == [2, 15]
+        assert s.twoSum2([2, 7], 17) == []
 
-assert s.twoSum3([2, 7, 11, 15], 9) == [0, 1]
-assert s.twoSum3([2, 7, 11, 15], 17) == [0, 3]
-assert s.twoSum3([2, 7], 17) == []
+        assert s.twoSum3([2, 7, 11, 15], 9) == [0, 1]
+        assert s.twoSum3([2, 7, 11, 15], 17) == [0, 3]
+        assert s.twoSum3([2, 7], 17) == []
+
+
+t = Tests()
 
 
 

@@ -63,10 +63,11 @@ Time:   O(n*log(n))         , where n is the length of the input array
 Space:  O(log(n)) or O(n)   , depending on the sort algorithm
 """
 
+
 class Solution:
-    def twoSumII(self, arr, target):
+    def twoSum2(self, arr, target):
         l = 0
-        r = len(arr)-1
+        r = len(arr) - 1
         while l < r:
             current = arr[l] + arr[r]
             if current == target:
@@ -77,3 +78,15 @@ class Solution:
                 l += 1
 
         return []
+
+
+
+class Tests:
+    def __init__(self):
+        s = Solution()
+        assert s.twoSum2([2, 7, 11, 15], 9) == [1, 2]
+        assert s.twoSum2([2, 7, 11, 15], 17) == [1, 4]
+        assert s.twoSum2([2, 7], 17) == []
+
+
+t = Tests()

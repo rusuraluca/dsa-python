@@ -1,12 +1,12 @@
 """
 Problem:
 -----------------------------------------------
-https://leetcode.com/problems/binary-tree-preorder-traversal/
+https://leetcode.com/problems/binary-tree-postorder-traversal/
 
 
 Definition:
 -----------------------------------------------
-Postorder Traversal: ROOT -> LEFT -> RIGHT
+Postorder Traversal:  LEFT -> RIGHT -> NODE
 
 
 Base cases:
@@ -41,9 +41,9 @@ Recursive Solution:
 1) create an empty list
 2) check base case
 3) if root is not NULL
-    b) append root's value to list
     a) call the function for the root's left child and append the result to the list
     c) call the function for the root's right child and append the result to the list
+    b) append root's value to list
 4) return list
 
 @complexity:
@@ -61,48 +61,42 @@ class TreeNode:
 
 
 class Solution:
-    def preorderTraversalStack(self, root):
+    def postorderTraversalStack(self, root):
         ans = []
 
         if root is None:
             return ans
 
-        # create an empty stack and push root to it
         stack = []
-        stack.append(root)
+        curr = root
 
-        while stack:
-
-            curr = stack.pop()
-
+        while stack or curr:
             if curr:
-                ans.append(curr.val)
+                stack.append(curr)
+                curr = curr.left
 
-                # stack is last in first out
 
-                # push right child
-                stack.append(curr.right)
 
-                # push left child
-                stack.append(curr.left)
-
-        return ans
-
-    def preorderTraversalRecursive(self, root):
+    def postorderTraversalRecursive(self, root):
         ans = []
 
         if root:
+            ans += self.postorderTraversalRecursive(root.left)
+            ans += self.postorderTraversalRecursive(root.right)
             ans.append(root.val)
-            ans += self.preorderTraversalRecursive(root.left)
-            ans += self.preorderTraversalRecursive(root.right)
 
         return ans
 
-s = Solution()
 
-n3 = TreeNode(3)
-n2 = TreeNode(2, n3)
-n1 = TreeNode(1, None, n2)
+class Tests:
+    def __init__(self):
+        s = Solution()
 
-assert s.preorderTraversalStack(n1) == [1, 2, 3]
-assert s.preorderTraversalRecursive(n1) == [1, 2, 3]
+        n3 = TreeNode(3)
+        n2 = TreeNode(2, n3)
+        n1 = TreeNode(1, None, n2)
+
+        assert s.postorderTraversalRecursive(n1) == [3, 2, 1]
+
+
+t = Tests()

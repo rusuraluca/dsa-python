@@ -7,7 +7,8 @@ https://leetcode.com/problems/squares-of-a-sorted-array/
 Naive Solution:
 -----------------------------------------------
 @description:
-Squaring each element and sorting the new array.
+Squaring each element and sorting the new array
+
 @complexity:
 Time:   O(nlog(n)), n is the number of elems in the array
 Space:  O(1), no auxiliary space needed
@@ -71,6 +72,11 @@ class Solution:
         return res[::-1]
 
 
-s = Solution()
-assert s.sortedSquares([-4, -1, 0, 3, 10]) == [0, 1, 9, 16, 100]
-assert s.sortedSquares([-7, -3, 2, 3, 11]) == [4, 9, 9, 49, 121]
+class Tests:
+    def __init__(self):
+        s = Solution()
+        assert s.sortedSquares([-4, -1, 0, 3, 10]) == [0, 1, 9, 16, 100]
+        assert s.sortedSquares([-7, -3, 2, 3, 11]) == [4, 9, 9, 49, 121]
+
+
+t = Tests()

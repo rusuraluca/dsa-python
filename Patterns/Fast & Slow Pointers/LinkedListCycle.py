@@ -33,6 +33,8 @@ Fast & Slow Pointer Solution:
 Time:  O(n), for traversing once the n nodes in the linked list
 Space: O(1), no auxiliary space required
 """
+
+
 class Node:
     def __init__(self, data):
         self.value = data
@@ -54,13 +56,13 @@ class Solution:
         return False
 
 
-class Test:
-    def tests(self):
+class Tests:
+    def __init__(self):
         l1 = Node(1)
         l1.next = Node(2)
         l1.next.next = Node(3)
         s = Solution()
-        assert s.cycle(l1) == None
+        assert s.cycle(l1) is None
 
         l1 = Node(1)
         l1.next = Node(2)
@@ -80,5 +82,4 @@ class Test:
         assert s.cycle(l1) == l1.next.next.next
 
 
-t = Test()
-t.tests()
+t = Tests()

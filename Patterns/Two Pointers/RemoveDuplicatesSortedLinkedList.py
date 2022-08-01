@@ -4,11 +4,13 @@ Problem:
 https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 
 
-Solution:
+Base Cases:
 -----------------------------------------------
-@base cases:
-- if input linked list is empty just return head
+If input linked list is empty just return head
 
+
+Two Pointers Solution:
+-----------------------------------------------
 @description:
 Input: head = [1,1,2]
 Output: [1,2]
@@ -29,17 +31,19 @@ return answer
 Time:  O(n), we traverse once the n nodes of the linked list
 Space: O(1), no auxiliary space needed
 """
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
-class Solution:
 
+class Solution:
     def deleteDuplicates(self, head):
         # if input linked list is empty just return head
-        if head == None:
+        if head is None:
             return head
 
         # keep head in answer
@@ -61,10 +65,16 @@ class Solution:
         # return answer
         return ans
 
-s = Solution()
 
-n3 = ListNode(2)
-n2 = ListNode(1, n3)
-n1 = ListNode(1, n2)
-assert s.deleteDuplicates(n1) == n1
-assert n1.next == n3
+class Tests:
+    def __init__(self):
+        s = Solution()
+
+        n3 = ListNode(2)
+        n2 = ListNode(1, n3)
+        n1 = ListNode(1, n2)
+        assert s.deleteDuplicates(n1) == n1
+        assert n1.next == n3
+
+
+t = Tests()

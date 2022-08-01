@@ -83,6 +83,7 @@ Time:   O(n), n is the number of nodes in the tree
 Space:  O(1), no auxiliary space required
 """
 
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -115,7 +116,6 @@ class Solution:
 
         return ans
 
-    # recursive
     def inorderTraversalRecursive(self, root):
         ans = []
 
@@ -158,12 +158,18 @@ class Solution:
 
         return ans
 
-s = Solution()
 
-n3 = TreeNode(3)
-n2 = TreeNode(2, n3)
-n1 = TreeNode(1, None, n2)
+class Tests:
+    def __init__(self):
+        s = Solution()
 
-assert s.inorderTraversalStack(n1) == [1, 3, 2]
-assert s.inorderTraversalRecursive(n1) == [1, 3, 2]
-assert s.inorderTraversalIterative(n1) == [1, 3, 2]
+        n3 = TreeNode(3)
+        n2 = TreeNode(2, n3)
+        n1 = TreeNode(1, None, n2)
+
+        assert s.inorderTraversalStack(n1) == [1, 3, 2]
+        assert s.inorderTraversalRecursive(n1) == [1, 3, 2]
+        assert s.inorderTraversalIterative(n1) == [1, 3, 2]
+
+
+t = Tests()

@@ -3,6 +3,7 @@ Problem:
 -----------------------------------------------
 https://leetcode.com/problems/3sum/
 
+
 Naive Solution:
 -----------------------------------------------
 @description:
@@ -109,12 +110,17 @@ class Solution:
         return sol
 
 
-s = Solution()
-assert s.threeSumTwoPointers([0, 1, 1]) == []
-assert s.threeSumTwoPointers([-1, 0, 1, 2, -1, -4]) == [[-1, -1, 2], [-1, 0, 1]]
+class Tests:
+    def __init__(self):
+        s = Solution()
+        assert s.threeSumTwoPointers([0, 1, 1]) == []
+        assert s.threeSumTwoPointers([-1, 0, 1, 2, -1, -4]) == [[-1, -1, 2], [-1, 0, 1]]
 
-assert s.threeSumHashing([0, 1, 1]) == []
-assert s.threeSumHashing([-1, 0, 1, 2, -1, -4]) == [[-1, -1, 2], [-1, 0, 1]]
+        assert s.threeSumHashing([0, 1, 1]) == []
+        assert s.threeSumHashing([-1, 0, 1, 2, -1, -4]) == [[-1, -1, 2], [-1, 0, 1]]
 
-assert s.threeSumHashing2([0, 1, 1]) == []
-assert s.threeSumHashing2([-1, 0, 1, 2, -1, -4]) == [[-1, 0, 1], [-1, -1, 2]]
+        assert s.threeSumHashing2([0, 1, 1]) == []
+        assert s.threeSumHashing2([-1, 0, 1, 2, -1, -4]) == [[-1, 0, 1], [-1, -1, 2]]
+
+
+t = Tests()
