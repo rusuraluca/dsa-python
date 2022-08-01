@@ -1,18 +1,17 @@
 """
 Problem:
 -----------------------------------------------
-https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP
 
 Given an array of positive numbers and a positive number ‘k,’
-find the maximum sum of any contiguous subarray of size ‘k’.
+find the minimum sum of any contiguous subarray of size ‘k’.
 
 Input: [2, 1, 5, 1, 3, 2], k = 3
-Output: 9
-Explanation: Subarray with maximum sum is [5, 1, 3].
+Output: 6
+Explanation: Subarray with minimum sum is [1, 3, 2].
 
 Input: [2, 3, 4, 1, 5], k = 2
-Output: 7
-Explanation: Subarray with maximum sum is [3, 4].
+Output: 5
+Explanation: Subarray with minimum sum is [2, 3].
 
 
 Base Cases:
@@ -25,15 +24,17 @@ Brute Force Solution:
 @description:
 [2, 1, 5, 1, 3, 2], k = 3
 
-[2, 1, 5] => max = 8
+[2, 1, 5] => min = 8
 
-[1, 5, 1] => max = 8
+[1, 5, 1] => min = 7
 
-[5, 1, 3] => max = 9
+[5, 1, 3] => min = 7
+
+[1, 3, 2] => min = 6
 
 Traverse once the array from 0 to n-k, where n is the number of elements in the array
     At each element calculate the sum of the k elements starting from the current element
-    If the current sum is bigger than our global maximum sum, update maximum sum
+    If the current sum is smaller than our global minimum sum, update minimum sum
     Otherwise, continue
 
 @complexity:
@@ -60,12 +61,13 @@ Space: O(1)
 
 
 class Solution:
-    def maximumSumSubarrayofSizeKSlidingWindow(self, arr, k):
+    def minimumSumSubarrayofSizeKSlidingWindow(self, arr, k):
         # base case
         if len(arr) == k:
             return sum(arr)
-        # global max sum
-        maxSum = 0
+
+        # global min sum
+        minSum = float('inf')
         # to retain temp window sum
         windowSum = 0
         # to retain temp index of starting elem of subarray
@@ -77,21 +79,21 @@ class Solution:
 
             # slide the window, we don't need to slide if we've not hit the required window size of 'k'
             if (w - windowStart + 1) == k:
-                maxSum = max(maxSum, windowSum)
+                minSum = min(minSum, windowSum)
                 # subtract the element going out
                 windowSum -= arr[windowStart]
                 # slide the window ahead
                 windowStart += 1
 
-        return maxSum
+        return minSum
 
 
 class Tests:
     def __init__(self):
         s = Solution()
-        assert s.maximumSumSubarrayofSizeKSlidingWindow([2, 1, 5, 1, 3, 2], 3) == 9
-        assert s.maximumSumSubarrayofSizeKSlidingWindow([2, 3, 4, 1, 5], 2) == 7
-        assert s.maximumSumSubarrayofSizeKSlidingWindow([2, 3], 2) == 5
+        assert s.minimumSumSubarrayofSizeKSlidingWindow([2, 1, 5, 1, 3, 2], 3) == 6
+        assert s.minimumSumSubarrayofSizeKSlidingWindow([2, 3, 4, 1, 5], 2) == 5
+        assert s.minimumSumSubarrayofSizeKSlidingWindow([2, 3], 2) == 5
 
 
 t = Tests()

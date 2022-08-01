@@ -9,18 +9,15 @@ Brush up your data structure and algorithms skills in python and get ready for y
 # Problems
 
 ## Data Structures
-##### [Matrix](https://github.com/rusuraluca/python_interview_prep/tree/main/Data%20Structures/Matrix)
-
-##### [Tree](https://github.com/rusuraluca/python_interview_prep/tree/main/Data%20Structures/Tree)
 
 ## Algorithms
 
 ## Patterns
-##### [Sliding Window](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Sliding%20Window)
+#### [Sliding Window](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Sliding%20Window)
 
-##### [Two Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Two%20Pointers)
+#### [Two Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Two%20Pointers)
 
-#####[Fast & Slow Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Fast%26Slow%20Pointers)
+#### [Fast & Slow Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Fast%26Slow%20Pointers)
 
 # Let's connect
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ralucamariarusu/)
