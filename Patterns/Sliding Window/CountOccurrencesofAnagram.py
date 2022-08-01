@@ -36,7 +36,7 @@ Return the count variable
 @complexity:
 Time: O(n+w), where n is the number of characters in the input text string
               where w is the number of characters in the input word string
-Space: O(n+w)
+Space: O(1)
 """
 
 
@@ -64,6 +64,22 @@ class Solution:
                 windowStart += 1
 
         return count
+
+
+    def countOccurrencesofAnagram2(self, text, word):
+        def isAnagram(s, word):
+            if len(s) != len(word):
+                return False
+
+            d = [0] * 26
+            for c in s:
+                d[ord(c) - ord('a')] = 1
+
+            for c in word:
+                if d[ord(c) - ord('a')] == 0:
+                    return False
+
+            return True
 
 
 class Tests:
