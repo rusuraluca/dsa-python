@@ -4,10 +4,9 @@ Problem:
 https://leetcode.com/problems/insert-into-a-binary-search-tree/
 
 
-Solutions:
+Recursive Solution:
 -----------------------------------------------
 @description:
-Recursive:
 - Start from the root
 - Compare the inserting element with root
     - If less than root
@@ -15,22 +14,39 @@ Recursive:
         - Else recursively call right subtree
 - After reaching the end, just insert that node at left(if less than current) or else right
 
-Iterative:
-- It is to be noted that new keys are always inserted at the leaf node
-- Start from root and run a loop until a null pointer is reached
-    - Keep the previous pointer of the current node stored
-    - If the current node is null then create and insert the new node there
-      and make it as one of the children of the parent/previous node depending on its value
-    - If the value of current node is less than the new value then move to the right child of current node
-      else move to the left child
-
 @complexity:
 Time:   O(log(n)) <=> O(h), where h is height of binary search tree.
+        For height-balanced BSTs, with each comparison, skip about half of the tree
+        so that each insertion operation takes time
+        proportional to the logarithm of the total number of items n stored in the tree.
         In the worst case, we may have to travel from root to the deepest leaf node.
         In worst case the height is equal to number of nodes
         and the time complexity of search and insert operation may become O(n).
 
-Space: O(n), for the BST
+Space: O(h), used by the recursive routine that is proportional to the tree’s height
+
+
+Iterative Solution:
+-----------------------------------------------
+@description:
+- It is to be noted that new keys are always inserted at the leaf node
+- Initially, the key is compared with that of the root
+- If its key is less than the root’s, it is then compared with the root’s left child’s key
+- If its key is greater, it is compared with the root’s right child
+- This process continues until the new node is compared with a leaf node, and then it is added as this node’s right or left child, depending on its key:
+    - If the key is less than the leaf’s key, then it is inserted as the leaf’s left child
+    - Otherwise, as to the leaf’s right child
+
+@complexity:
+Time:   O(log(n)) <=> O(h), where h is height of binary search tree.
+        For height-balanced BSTs, with each comparison, skip about half of the tree
+        so that each insertion operation takes time
+        proportional to the logarithm of the total number of items n stored in the tree.
+        In the worst case, we may have to travel from root to the deepest leaf node.
+        In worst case the height is equal to number of nodes
+        and the time complexity of search and insert operation may become O(n).
+
+Space:  O(1), no additional space required
 """
 
 
@@ -71,18 +87,19 @@ class BST:
             self.root = node
             return
 
-        prev = None
-        temp = self.root
-        while temp is not None:
-            prev = temp
-            if temp.val > val:
-                temp = temp.left
-            elif temp.val < val:
-                temp = temp.right
-        if prev.val > val:
-            prev.left = node
+        parent = None
+        curr = self.root
+        while curr is not None:
+            parent = curr
+            if curr.val > val:
+                curr = curr.left
+            elif curr.val < val:
+                curr = curr.right
+
+        if parent.val > val:
+            parent.left = node
         else:
-            prev.right = node
+            parent.right = node
 
     def inorderIterative(self):
         temp = self.root
