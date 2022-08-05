@@ -1,9 +1,8 @@
 # Python DSA Interview Prep
 
-Brush up your Data StructureS and Algorithms skills in Python and get ready for your next Interview.
+Brush up your Data Structures and Algorithms skills in Python and get ready for your next Interview.
 
-
-
+<!--- 
 ## Data Structures
 + #### [Array](https://invented-oviraptor-ff0.notion.site/Array-282596d9e9db42eaaa9608044e64ed82)
 + #### [Stack](https://invented-oviraptor-ff0.notion.site/Stack-6abf9e0c9c81402aa39fa59d82f4e5c9)
@@ -33,18 +32,22 @@ Brush up your Data StructureS and Algorithms skills in Python and get ready for 
 + #### [Dynamic Programming Approach]()
 + #### [Backtracking]()
 
+--->
 
 
 # Patterns
-+ #### [Sliding Window](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Sliding%20Window)
-
-+ #### [Two Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Two%20Pointers)
++ #### [Fast & Slow Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Fast%26Slow%20Pointers)
 
 + #### [Modified Binary Search](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Modified%20Binary%20Search)
 
-+ #### [Fast & Slow Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Fast%26Slow%20Pointers)
++ #### [Sliding Window](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Sliding%20Window)
 
 + #### [Tree Breadth First Search](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Tree%20Breadth%20First%20Search)
+
++ #### [Tree Depth First Search](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Tree%20Breadth%20First%20Search)
+
++ #### [Two Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Two%20Pointers)
+
 
 # Recommended Problems
 
@@ -76,9 +79,77 @@ Brush up your Data StructureS and Algorithms skills in Python and get ready for 
 - [x]  [Contains Duplicate](https://leetcode.com/problems/contains-duplicate)
 - [x]  [Path Sum](https://leetcode.com/problems/path-sum/)
 
+`Medium`
+
+- [ ]  [Min Stack](https://leetcode.com/problems/min-stack)
+- [ ]  [Insert Interval](https://leetcode.com/problems/insert-interval)
+- [ ]  [01 Matrix](https://leetcode.com/problems/01-matrix)
+- [ ]  [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin)
+- [ ]  [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
+- [ ]  [3Sum](https://leetcode.com/problems/3sum)
+- [ ]  [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
+- [ ]  [Clone Graph](https://leetcode.com/problems/clone-graph)
+- [ ]  [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
+- [ ]  [Course Schedule](https://leetcode.com/problems/course-schedule)
+- [ ]  [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree)
+- [ ]  [Coin Change](https://leetcode.com/problems/coin-change)
+- [ ]  [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)
+- [x]  [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree)
+- [ ]  [Number of Islands](https://leetcode.com/problems/number-of-islands)
+- [ ]  [Rotting Oranges](https://leetcode.com/problems/rotting-oranges)
+- [ ]  [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array)
+- [ ]  [Combination Sum](https://leetcode.com/problems/combination-sum)
+- [ ]  [Permutations](https://leetcode.com/problems/permutations)
+- [ ]  [Merge Intervals](https://leetcode.com/problems/merge-intervals)
+- [ ]  [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
+- [ ]  [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store)
+- [ ]  [Accounts Merge](https://leetcode.com/problems/accounts-merge)
+- [ ]  [Sort Colors](https://leetcode.com/problems/sort-colors)
+- [ ]  [Word Break](https://leetcode.com/problems/word-break)
+- [ ]  [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum)
+- [ ]  [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi)
+- [ ]  [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)
+- [ ]  [Subsets](https://leetcode.com/problems/subsets)
+- [ ]  [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
+- [ ]  [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring)
+- [ ]  [Unique Paths](https://leetcode.com/problems/unique-paths)
+- [ ]  [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)
+- [ ]  [Container With Most Water](https://leetcode.com/problems/container-with-most-water)
+- [ ]  [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number)
+- [ ]  [Word Search](https://leetcode.com/problems/word-search)
+- [ ]  [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string)
+- [ ]  [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees)
+- [ ]  [Task Scheduler](https://leetcode.com/problems/task-scheduler)
+- [ ]  [LRU Cache](https://leetcode.com/problems/lru-cache)
+- [ ]  [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst)
+
+`Hard`
+
+- [ ]  [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring)
+- [ ]  [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)
+- [ ]  [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)
+- [ ]  [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream)
+- [ ]  [Word Ladder](https://leetcode.com/problems/word-ladder)
+- [ ]  [Basic Calculator](https://leetcode.com/problems/basic-calculator)
+- [ ]  [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling)
+- [ ]  [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)
+- [ ]  [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram)
+- [x]  [Subarrays with K Different Integers](https://leetcode.com/problems/subarrays-with-k-different-integers/)
+- [x]  [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
+- [x]  [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
+
+
 # Let's connect
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ralucamariarusu/)
 
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/itsralucarusu)
 
 [![instagram](https://img.shields.io/badge/instagram-B544C7?style=for-the-badge&logo=twitter&logoColor=white)](https://instagram.com/itsralucarusu)
+
+[![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)]()
+
+[![Hackerrank](https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white)]()
+
+[![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)]()
+
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)]()
