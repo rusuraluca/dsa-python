@@ -38,7 +38,9 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 # Patterns
 + #### [Fast & Slow Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Fast%26Slow%20Pointers)
 
-+ #### [In-place Reversal Linked List](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Linnked%20Binary%20Search)
++ #### [In-place Reversal Linked List](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/In-place%20Reversal%20Linked%20List)
+
++ #### [Miscellaneous](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/In-place%20Reversal%20Linked%20List)
 
 + #### [Modified Binary Search](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Modified%20Binary%20Search)
 
@@ -52,7 +54,6 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 
 
 # Recommended Problems
-
 `Easy`
 - [x]  [Two Sum](https://leetcode.com/problems/two-sum)
 - [x]  [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)
@@ -73,7 +74,7 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 - [x]  [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
 - [x]  [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
 - [x]  [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)
-- [ ]  [Majority Element](https://leetcode.com/problems/majority-element)
+- [x]  [Majority Element](https://leetcode.com/problems/majority-element)
 - [ ]  [Add Binary](https://leetcode.com/problems/add-binary)
 - [x]  [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)
 - [x]  [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list)
