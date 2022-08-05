@@ -65,7 +65,7 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 - [x]  [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)
 - [x]  [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)
 - [x]  [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
-- [ ]  [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
+- [x]  [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
 - [ ]  [First Bad Version](https://leetcode.com/problems/first-bad-version)
 - [ ]  [Ransom Note](https://leetcode.com/problems/ransom-note)
 - [ ]  [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
