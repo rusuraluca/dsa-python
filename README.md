@@ -46,6 +46,35 @@ Brush up your Data StructureS and Algorithms skills in Python and get ready for 
 
 + #### [Tree Breadth First Search](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Tree%20Breadth%20First%20Search)
 
+# Recommended Problems
+
+`Easy`
+- [x]  [Two Sum](https://leetcode.com/problems/two-sum)
+- [x]  [Valid Parentheses](https://leetcode.com/problems/valid-parentheses)
+- [x]  [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)
+- [x]  [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
+- [x]  [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
+- [x]  [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)
+- [x]  [Valid Anagram](https://leetcode.com/problems/valid-anagram)
+- [x]  [Binary Search](https://leetcode.com/problems/binary-search)
+- [ ]  [Flood Fill](https://leetcode.com/problems/flood-fill)
+- [x]  [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)
+- [x]  [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)
+- [x]  [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)
+- [x]  [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
+- [ ]  [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
+- [ ]  [First Bad Version](https://leetcode.com/problems/first-bad-version)
+- [ ]  [Ransom Note](https://leetcode.com/problems/ransom-note)
+- [ ]  [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
+- [ ]  [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
+- [ ]  [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)
+- [ ]  [Majority Element](https://leetcode.com/problems/majority-element)
+- [ ]  [Add Binary](https://leetcode.com/problems/add-binary)
+- [x]  [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)
+- [x]  [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list)
+- [x]  [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)
+- [x]  [Contains Duplicate](https://leetcode.com/problems/contains-duplicate)
+- [x]  [Path Sum](https://leetcode.com/problems/path-sum/)
 
 # Let's connect
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ralucamariarusu/)
