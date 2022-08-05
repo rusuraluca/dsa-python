@@ -66,7 +66,7 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 - [x]  [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)
 - [x]  [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
 - [x]  [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
-- [ ]  [First Bad Version](https://leetcode.com/problems/first-bad-version)
+- [x]  [First Bad Version](https://leetcode.com/problems/first-bad-version)
 - [ ]  [Ransom Note](https://leetcode.com/problems/ransom-note)
 - [ ]  [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
 - [ ]  [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
