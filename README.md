@@ -38,6 +38,8 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 # Patterns
 + #### [Fast & Slow Pointers](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Fast%26Slow%20Pointers)
 
++ #### [In-place Reversal Linked List](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Linnked%20Binary%20Search)
+
 + #### [Modified Binary Search](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Modified%20Binary%20Search)
 
 + #### [Sliding Window](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Sliding%20Window)
@@ -67,10 +69,10 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 - [x]  [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
 - [x]  [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
 - [x]  [First Bad Version](https://leetcode.com/problems/first-bad-version)
-- [ ]  [Ransom Note](https://leetcode.com/problems/ransom-note)
-- [ ]  [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
-- [ ]  [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
-- [ ]  [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)
+- [x]  [Ransom Note](https://leetcode.com/problems/ransom-note)
+- [x]  [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
+- [x]  [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
+- [x]  [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)
 - [ ]  [Majority Element](https://leetcode.com/problems/majority-element)
 - [ ]  [Add Binary](https://leetcode.com/problems/add-binary)
 - [x]  [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)
