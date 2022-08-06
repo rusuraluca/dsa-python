@@ -40,7 +40,7 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 
 + #### [In-place Reversal Linked List](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/In-place%20Reversal%20Linked%20List)
 
-+ #### [Miscellaneous](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/In-place%20Reversal%20Linked%20List)
++ #### [Miscellaneous](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Miscellaneous)
 
 + #### [Modified Binary Search](https://github.com/rusuraluca/python_interview_prep/tree/main/Patterns/Modified%20Binary%20Search)
 
@@ -89,8 +89,8 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 - [ ]  [01 Matrix](https://leetcode.com/problems/01-matrix)
 - [ ]  [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin)
 - [ ]  [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
-- [ ]  [3Sum](https://leetcode.com/problems/3sum)
-- [ ]  [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
+- [x]  [3Sum](https://leetcode.com/problems/3sum)
+- [x]  [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
 - [ ]  [Clone Graph](https://leetcode.com/problems/clone-graph)
 - [ ]  [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
 - [ ]  [Course Schedule](https://leetcode.com/problems/course-schedule)
@@ -104,7 +104,7 @@ Brush up your Data Structures and Algorithms skills in Python and get ready for 
 - [ ]  [Combination Sum](https://leetcode.com/problems/combination-sum)
 - [ ]  [Permutations](https://leetcode.com/problems/permutations)
 - [ ]  [Merge Intervals](https://leetcode.com/problems/merge-intervals)
-- [ ]  [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
+- [x]  [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
 - [ ]  [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store)
 - [ ]  [Accounts Merge](https://leetcode.com/problems/accounts-merge)
 - [ ]  [Sort Colors](https://leetcode.com/problems/sort-colors)
