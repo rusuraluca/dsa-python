@@ -12,7 +12,7 @@ The ideal data structure for storing key and value pairs is HashMap.
 Sort the HashMap by its value and pick only k elements.
 
 @complexity:
-Time:  O(nlogn), for sorting the n elements
+Time:  O(n*logn), for sorting the n elements
 Space: O(n), for the hashmap
 
 
@@ -28,8 +28,8 @@ we poll the top element which is the minimum element.
 Once all the elements of HashMap are put in a Priority queue, we only get the top k elements.
 
 @complexity:
-Time:  O(nlogk)
-Space: O(n), for the min heap
+Time:   O(n·log(k))
+Space:  O(k)
 """
 import heapq
 
@@ -70,3 +70,4 @@ class Solution:
 
         # return the first k elements
         return [x[0] for x in d[:k]]
+
