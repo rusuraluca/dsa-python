@@ -12,7 +12,7 @@ If string empty => not valid
 If substring empty => valid
 
 
-Two Pointers Solution:
+Iterative Solution:
 -----------------------------------------------
 @description
 t = "ahbgdc"
@@ -46,28 +46,29 @@ stop when
 - no more characters in the given string
 - no more characters to check in the subsequence
 
-@pseudocode:
-check base cases
-traverse the char of the string
-    if current char is equal to the current subchar
-        subchar becomes to the next char of the substring
-        if subchar index is equal to subchar len
-            then is valid
-
-is substring is empty
-    then is valid
-otherwise
-    not valid
+Check base cases
+Loop through the chars in the string
+    If current char is equal to the first char of the given substring
+        Move forward in the substring
+        If we are the end of the substring
+            Return True
+Return False
 
 @complexity:
-Time:  O(n), n is the number of characters in the given string
-             we only traverse once the given string
-Space: O(1), no auxiliary space needed
+Time:   O(n) = O(len(s)), we traverse once all the characters of the givens string s
+Space:  O(1), no auxiliary space required
+
+
+Recursive Solution:
+-----------------------------------------------
+@complexity:
+Time:   O(n) = O(len(s)), we traverse once all the characters of the givens string s
+Space:  O(n) = O(len(s)), for the recursive stack calls
 """
 
 
 class Solution:
-    def isSubsequence(self, s: str, sub: str) -> bool:
+    def isSubsequenceIterative(self, s: str, sub: str) -> bool:
         if len(s) < len(sub):
             return False
 
@@ -89,12 +90,28 @@ class Solution:
 
         return False
 
+    def isSubsequenceRecursive(self, sub: str, s: str) -> bool:
+        def dp(i, j):
+            if i == len(sub):
+                return True
+
+            if j == len(s):
+                return False
+
+            if sub[i] == s[j]:
+                return dp(i + 1, j + 1)
+
+            else:
+                return dp(i, j + 1)
+
+        return dp(0, 0)
+
 
 class Tests:
     def __init__(self):
         s = Solution()
-        assert s.isSubsequence("ahbgdc", "abc") == True
-        assert s.isSubsequence("ahbgdc", "axc") == False
+        assert s.isSubsequenceIterative("ahbgdc", "abc") == True
+        assert s.isSubsequenceRecursive("ahbgdc", "axc") == False
 
 
 t = Tests()

@@ -52,7 +52,7 @@ def array_pair_sum(arr, k):
             # Add a tuple with the corresponding pair
             output.add((min(num, target), max(num, target)))
 
-    print'\n'.join(map(str, list(output)))
+    print('\n'.join(map(str, list(output))))
     return len(output)
 
 
