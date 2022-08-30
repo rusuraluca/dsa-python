@@ -15,7 +15,6 @@ We can print all nodes present in a level by modifying the preorder traversal on
 Time:  O(n^2), where n is the total number of nodes in the binary tree
 Space: O(h), for the call stack, where h is the height of the tree
 
-
 We can reduce the time complexity by using extra space.
 
 
@@ -72,25 +71,18 @@ class Solution:
 
         queue = deque()
         queue.append(root)
-
         res = []
 
         while queue:
-
             level = []
-
             for i in range(len(queue)):
-
                 curr = queue.popleft()
-
                 if curr:
                     level.append(curr.val)
                     queue.append(curr.left)
                     queue.append(curr.right)
-
             if level:
                 res.append(level)
-
         return res
 
     def preorder(self, root, level, d):
@@ -112,4 +104,3 @@ class Solution:
             res.append(d[i])
 
         return res
-

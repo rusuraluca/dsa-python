@@ -4,11 +4,6 @@ Problem:
 https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 
 
-Base Cases:
------------------------------------------------
-If input linked list is empty just return head
-
-
 Two Pointers Solution:
 -----------------------------------------------
 @description:
@@ -21,6 +16,8 @@ ans.next = 1 => ans == ans.next => ans.next = ans.next.next = 2
 ans.next = 2 => ans != next => ans = ans.next = NULL => STOP
 return ans = [1,2]
 
+If input linked list is empty just return head
+
 @pseudocode:
 while we still have nodes in the linked list
 - if next node has same value as current, skip next node (i.e update head's next node)
@@ -29,7 +26,7 @@ return answer
 
 @complexity:
 Time:  O(n), we traverse once the n nodes of the linked list
-Space: O(1), no auxiliary space needed
+Space: O(1), no auxiliary space required
 """
 
 

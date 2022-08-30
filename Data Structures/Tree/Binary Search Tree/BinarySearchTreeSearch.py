@@ -13,7 +13,6 @@ Recursive Solution:
     - If the element to search is found anywhere, return true, else return false
 
 @complexity:
-@complexity:
 Time:   O(log(n)) <=> O(h), where h is height of binary search tree.
         For height-balanced BSTs, with each comparison, skip about half of the tree
         so that each insertion operation takes time
@@ -39,9 +38,9 @@ Time:   O(log(n)) <=> O(h), where h is height of binary search tree.
         and the time complexity of search and insert operation may become O(n).
 
 Space:  O(1), no additional space required
-
-
 """
+
+
 class Node:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

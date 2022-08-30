@@ -4,22 +4,15 @@ Problem:
 https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
 
-The maximum depth of a binary tree is the number of nodes from the root down to the furthest leaf node.
-In other words, it is the height of a binary tree.
-
-
-Base Case:
------------------------------------------------
-Empty tree = > has a height of 0
-
-
 Iterative Solution:
 -----------------------------------------------
 @description:
-BFS (level order traversal) alike approach
+The maximum depth of a binary tree is the number of nodes from the root down to the furthest leaf node.
+In other words, it is the height of a binary tree.
 Whenever move down to a level, increment height by 1 (height is initialized as 0).
 Count number of nodes at each level,
 stop traversing when the count of nodes at the next level is 0.
+Empty tree = > has a height of 0
 
 - Create a queue
 - Push root into the queue
@@ -28,7 +21,7 @@ stop traversing when the count of nodes at the next level is 0.
 
 - While the queue is not empty
     - Number of nodes in the current level = size of queue
-    - Otheriwse, process each node of the current level and enqueue their non-empty left and right child
+    - Otherwise, process each node of the current level and enqueue their non-empty left and right child
     - Increment height by 1 for each level
 
 - If the number of nodes in the queue is 0, it implies that all the levels of the tree have been parsed
@@ -37,7 +30,7 @@ stop traversing when the count of nodes at the next level is 0.
 @complexity:
 Time:   O(n), traverse once the n nodes of the binary tree
 Space:  O(n), for the queue data structure
-              it will hold at most 1/2*n nodes <=> n nodes
+              it will hold at most (1/2)*n nodes <=> n nodes
 
 
 Recursive Solution:

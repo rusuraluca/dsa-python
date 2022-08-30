@@ -1,16 +1,11 @@
 """
+Problem:
+-----------------------------------------------
 https://leetcode.com/problems/valid-parentheses/
 
-Base Case:
-
-- length of the expression must be even
-
-@pseudocode
-- if the len of the expression is odd
-  => expression is not valid
 
 Stack Solution:
-
+-----------------------------------------------
 @description:
 We can use a stack to solve this problem. The idea is to traverse the given expression, and
 - If the current character in the expression is an opening brace ( or { or [, push it into the stack.
@@ -19,6 +14,7 @@ and return false if the popped character is not the same as the current characte
 or it does not pair with the current character of the expression.
 Also, if the stack is empty, the total number of opening braces is less than the closing brace number at that point,
 so the expression cannot be balanced.
+Length of the expression must be even
 
 @pseudocode:
 - check edge case
@@ -41,8 +37,9 @@ so the expression cannot be balanced.
 Time:  O(n), we only loop once through the expression
 Space: O(n), for the stack as n is the number of bracket pairs
 
-Stack & HashMap Solution:
 
+Stack & HashMap Solution:
+-----------------------------------------------
 @description:
 A good solution traverses the given expression, and for each opening brace in the expression,
 push the corresponding closing brace into the stack.
@@ -156,12 +153,12 @@ class Solution:
 
 def testValidParantheses():
     s = Solution()
-    assert s.validParanthesesStack('[](){([[[]]])}(') == False
-    assert s.validParanthesesStack('[{{{(())}}}]((()))') == True
-    assert s.validParanthesesStack('[[[]])]') == False
-    assert s.validParanthesesStackHashMap('[](){([[[]]])}(') == False
-    assert s.validParanthesesStackHashMap('[{{{(())}}}]((()))') == True
-    assert s.validParanthesesStackHashMap('[[[]])]') == False
+    assert s.validParanthesesStack('[](){([[[]]])}(') is False
+    assert s.validParanthesesStack('[{{{(())}}}]((()))') is True
+    assert s.validParanthesesStack('[[[]])]') is False
+    assert s.validParanthesesStackHashMap('[](){([[[]]])}(') is False
+    assert s.validParanthesesStackHashMap('[{{{(())}}}]((()))') is True
+    assert s.validParanthesesStackHashMap('[[[]])]') is False
 
 
 if __name__ == "__main__":

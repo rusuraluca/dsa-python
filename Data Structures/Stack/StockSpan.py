@@ -117,8 +117,8 @@ Another Solution: (without using stack)
             span[i] = counter
 """
 
-class StockSpanner:
 
+class StockSpanner:
     def __init__(self):
         self.span_stack = []
 

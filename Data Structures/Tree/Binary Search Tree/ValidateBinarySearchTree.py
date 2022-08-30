@@ -64,6 +64,14 @@ Space:  O(h), it requires space proportional to the tree’s height for the call
 """
 
 
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
 class Solution:
     def __init__(self):
         self.pre = None
@@ -72,7 +80,6 @@ class Solution:
         return self.helper(root)
 
     def helper(self, cur):
-
         if cur is None:
             return True
 
@@ -89,7 +96,7 @@ class Solution:
         return self.helper2(root, float('-inf'), float('inf'))
 
     def helper2(self, node, minVal, maxVal):
-        if node == None:
+        if node is None:
             return True
 
         if node.val <= minVal or node.val >= maxVal:

@@ -22,10 +22,10 @@ Just use binary search to minimize the number of calls to the API.
 Time:  (log(n)), n is the number of software versions
 Space: O(1), no auxiliary space needed
 """
+
+
 # The isBadVersion API is already defined for you.
 # def isBadVersion(version: int) -> bool:
-
-
 class Solution:
     def firstBadVersion(self, n: int) -> int:
 
@@ -44,4 +44,3 @@ class Solution:
                 l = mid + 1
 
         return res
-
