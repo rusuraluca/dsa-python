@@ -125,7 +125,7 @@ Space:  O(n)    , the extra space required depends on the number of items stored
 
 
 class Solution:
-    def twoSum2(self, arr, target):
+    def twoSumSorting(self, arr, target):
         arr.sort()
         l = 0
         r = len(arr) - 1
@@ -141,7 +141,7 @@ class Solution:
 
         return []
 
-    def twoSum3(self, arr, target):
+    def twoSum(self, arr, target):
         hashtable = {}
 
         for current_id, current in enumerate(arr):
