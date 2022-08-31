@@ -37,8 +37,8 @@ Otherwise => not anagrams
 Time:   O(s+t)
 Space:  O(s+t)
 """
-
 from collections import Counter
+
 
 class Solution:
     def isAnagramHashTable(self, s: str, t: str) -> bool:
