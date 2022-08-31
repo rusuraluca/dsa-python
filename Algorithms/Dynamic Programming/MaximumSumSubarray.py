@@ -38,7 +38,7 @@ maxSum     = max(currMaxSum, maxSum)
 
 @complexity:
 Time:  O(n), we traverse once the n elements of the array
-Space: O(1), no auxiliary space required
+Space: O(n), for the dp matrix
 """
 
 
