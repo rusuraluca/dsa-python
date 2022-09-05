@@ -93,9 +93,17 @@ Follow up:
 -----------------------------------------------
 If all integer numbers from the stream are in the range [0, 100],
 how would you optimize your solution?
-
 If 99% of all integer numbers from the stream are in the range [0, 100],
 how would you optimize your solution?
+
+If all the numbers or 99% of the numbers are in a certain range (say 1-100), then:
+Initialize an array of size same as range (so array of size 100, for numbers in range 1-100) this will keep track of counts
+Everytime add_num is called increment the number at that index
+Ex: you get add_num called with 23 you do counts[23]++.
+You also increment the size instance variable to keep track of total number of numbers added
+When find_median is called you re-iterate through the counts array size/2 times (handle odd and even),
+in each iteration you go to the next count instead of the next count index
+The Space complexity is fixed, but time complexity will be O(n) for find_median
 """
 from heapq import *
 
