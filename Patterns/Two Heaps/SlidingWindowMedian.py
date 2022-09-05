@@ -7,228 +7,176 @@ https://leetcode.com/problems/sliding-window-median/
 Brute Force Solution:
 -----------------------------------------------
 @description:
-Run a nested loop:
-    The outer loop will mark the starting point of the subarray of length K
-    The inner loop will run from the starting index to index + K
-        Print the maximum element among these K elements
+A very obvious solution will be to sort the k numbers within a sliding window for each iteration.
+Suppose the length of the array is n, the total time complexity will be O(nklogk).
 
 @complexity:
-Time:   O(n * k), the outer loop runs n-k+1 times and the inner loop runs k times for every iteration of the outer loop
-                  so time complexity is O((n-k+1)*k) which can also be written as O(n * k)
+Time:   O(n * k * log k), where n is the length of the array
 Space:  O(1), no auxiliary space required
 
 
-Deque Solution:
------------------------------------------------
-@description:
-Create a Deque, dq of capacity k, that stores only useful elements of current window of k elements
-An element is useful if
-- it is in current window
-- is greater than all other elements on right side of it in current window
-Process all array elements one by one and maintain dq to contain useful elements of current window
-These useful elements are maintained in sorted order
-The element at front of the dq is the largest of current window
-The element at rear/back of dq is the smallest of current window
+We can do better than that!
+We notice that when the sliding window moves one step,
+a new number is added to the window and an old number is removed from the window.
+Therefore, for each iteration, we do not need to sort the whole sliding window again.
+We just need to
+    - remove the old number (O(k) time)
+    - insert the new number at the correct position (O(k) time) of the already sorted window
+Therefore, the total time complexity will be O(nk).
+
+Can we still do better? Yes!
+Now enters the secret ingredient — heap!
+Heap is particularly good at dynamically tracking something like the x-th largest number.
+Imagine that a stream of numbers is coming to you and you need to return
+the x-th largest number of all the numbers you have seen so far when each new number is encountered.
+This scenario is dynamic because you need to find the answers (x-th largest number)
+many times over constantly changing data.
+The solution is using a min heap to store the top x largest numbers
+and the top of the heap is the x-th largest number.
+When a new number comes, if it is smaller than the top of the heap,
+it can be discarded because it will never be the x-th largest number.
+If the new number is greater than the top of the heap,
+it will be added to the heap and the old top of the heap will be popped out.
+
+A median of k numbers is just roughly the k/2-th smallest number so it seems that a heap can be used here.
+In this scenario, we need two heaps instead of only one heap in the previous scenario.
+In the previous scenario, in order to find the x-th largest number,
+only the new numbers greater than the old x-th largest number have to be recorded,
+so only one heap is needed.
+In order to find the median of the sliding window,
+both new numbers greater than the old median and new numbers smaller than the old median need to be recorded,
+because both kinds of new numbers are candidates for the median.
+Since two heaps are needed and the median number(s) has to be at the top of the heap for easy access,
+the ultimate data structure is easy to guess — a max heap storing the smaller half of numbers in the sliding window
+and a min heap storing the larger half of numbers.
+The top numbers of the heaps are what we need to compute the median.
+When the length of the sliding window is an even number,
+size of max heap is the same as size of min heap.
+When it is an odd number,
+max heap will have one more item than min heap.
+
+Now that we know the data structure we want,
+it is time to design an algorithm to maintain this data structure.
+
+Maybe the following content would seem too trivial and obvious to you.
+The first thing we know is that we need a loop that moves the sliding window.
+Ok. Great first step. Now what will happen in each iteration of the loop?
+Before we tackle this question, it is helpful to think about the loop invariants.
+Loop invariants are qualities that do not change during the execution of the whole loop.
+In this problem, the loop invariants are:
+1. All numbers in the sliding window and only those should be in the two-heap stucture.
+2. The maximum of the max heap ≤ the minimum of the min heap.
+3. size of max heap = size of min heap or size of min heap + 1.
+
+In order to maintain these loop invariants, each iteration should:
+1. Add a new number encountered by the sliding window to the two-heap structure
+   and remove an old number the sliding window just left from the structure.
+2. If new number ≤ maximum of max heap,
+   add it to the max heap; otherwise, add it to the min heap.
+3. Maintain the size relationship between the two heaps by popping items from the heap
+   that has too many items and pushing them in the other heap.
+
+Now we got the complete algorithm. The total time complexity is O(nlog(size of heap)) = O(nlogk).
+
+Since the algorithm design is done, now comes time for implementation, which will be coded in Python.
+The heap in Python is a simple Python list plus heap functionalities supported in the heapq standard library.
+The problem with this heapq library is that
+although the theoretical time complexity for removing an item at any position of the heap is O(log(size of heap)),
+this kind of removal is not supported in the heapq library.
+The only way to remove an item at an arbitrary position is to loop through the whole heap
+to remove that item and to call heapq.heapify(heap), which make time complexity deteriorate to O(size of heap).
+
+There are two solutions to achieve the theoretical time complexity of O(log(size of heap)):
+1. implementing a hash-heap data structure
+2. using the lazy deletion technique
+
+A hash-heap data structure is a standard heap
+plus a hashing table mapping the value of an item to the index of the item.
 
 
-[1, 2, 3, 4], k = 3
-[       ]     -> 3
-   [       ]  -> 4
-We don't care about the [1, 2] after the first maximum
-
-[1, 1, 1, 1, 1, 4, 5  ...], k = 6
-[               ]
-   [               ]
-      [               ]
-        [               ]
-
-What if we use a deque that is always decreasing?
-
-[1, 1, 1, 1, 1]
-
-4 > topdeque = 1 => pop
-                 => output 4
-                 => push 4 to deque
-[4]
-
-5 > topdeque = 4 => pop
-                 => output 5
-                 => push 5 to deque
-[5]
-
-Deque stores index of the maximum element at the front and minimum element at the back
-At any time it stores indexes which belong to current window
-
-[1, 2, 3, 1, 4, 5, 2, 3, 6], k = 3
-window: [1, 2, 3]
-deque: {2}
-maxelem: nums[2] = 3
-
-window: [2, 3, 1]
-deque: {2, 3}
-maxelem: nums[2] = 3
-
-window: [3, 1, 4]
-deque: {4}
-maxelem: nums[4] = 4
-
-window: [1, 4, 5]
-deque: {5}
-maxelem: nums[5] = 5
-
-window: [4, 5, 2]
-deque: {5, 6}
-maxelem: nums[5] = 5
-
-window: [5, 2, 3]
-deque: {5, 7}
-maxelem: nums[5] = 5
-
-window: [2, 3, 6]
-deque: {8}
-maxelem: nums[8] = 6
-
-Create a deque to store k elements
-Run a loop and insert the first k elements in the deque
-Before inserting the element, check if the element at the back of the queue is smaller than the current element
-If it is so remove the element from the back of the deque
-until all elements left in the deque are greater than the current element
-Then insert the current element, at the back of the deque
-Now, run a loop from k to the end of the array.
-Append the front element of the deque to the result
-Remove the element from the front of the queue if they are out of the current window
-Insert the next element in the deque
-Before inserting the element, check if the element at the back of the queue is smaller than the current element
-If it is so remove the element from the back of the deque
-until all elements left in the deque are greater than the current element
-Then insert the current element, at the back of the deque
-Append the front element of the deque to the result
-
-Monotonic decreasing Queue
-Queue not Stack because we want to add/remove elements from beginning and end in O(1)
-
-[8, 7, 6, 9], k = 2
-[8, 7]
-deque: 8, 7
-res: 8
-    [7, 6]
-pop()
-deque: 7 6
-res: 8, 7
-       [6, 9]
-pop()
-deque: 6
-pop()
-deque:
-push(9)
-deque: 9
-res: 8, 7, 9
-
-@complexity:
-Time: O(n),  it seems more than O(n) at first look - it can be observed that every element of the array is added
-             and removed at most once, so there are total of 2*n operations
-Space: O(k), elements stored in the dequeue take O(k) space
-
-
-Two Heap / AVL Tree Solution:
------------------------------------------------
-@description:
-To reduce that time is to use an AVL tree which returns the maximum element in (log n) time.
-So, traverse through the array and keep k elements in the BST and print the maximum in every iteration.
-AVL tree is a suitable data structure as lookup, insertion, and deletion all take O(log n) time
-in both the average and worst cases, where n is the number of nodes in the tree prior to the operation.
-
-Create a Self-balancing BST (AVL tree) to store and find the maximum element
-Traverse through the array from start to end
-Insert the element in the AVL tree
-If the loop counter is greater than or equal to k then delete i-kth element from the BST
-Print the maximum element of the BST
-
-
-Instead of using the AVL tree, we could also use.
-The elements of the current window will be stored in the Max-Heap
-and the maximum element or the root will be printed in each iteration.
-
-- Pick first K elements and create a Max-Heap of size K
-- Perform heapify and print the root element
-- Store the next and last element from the array
-- Run a loop from k – 1 to n
-    - Replace the value of the element which has got out of the window with a new element which came inside the window.
-    - Perform heapify
-    - Print the root of the Heap
-
-@complexity:
-Time: O(n * log n), insertion, deletion and search takes log k time in a AVL tree/Heap
-                    So the overall time complexity is O(n * log k)
-Space: O(k), elements stored in the BST/Heap take O(k) space
+The lazy deletion technique means that when items need to be removed,
+it just records the items but does not actually remove them.
+Actual deletions only happen when the top of the heap is queried
+and the real top of the heap is blocked by items that should have been removed.
+Only at that time are those removed items actually popped out of the heap.
+This technique ensures that items are always removed from the top of the heap,
+hence the O(log(size of heap)) time complexity for removing a item at any position.
+However, when using this technique,
+the overall time complexity for the whole problem is O(nlog(size of heap))
+where size of heap is not always k because in the worst case scenario the size of heap can be n.
 """
-import collections
+from heapq import heappush, heappop
 
 
 class Solution:
-    def maxSlidingWindowBruteForce(self, nums, k):
-        res = []
-        for i in range(len(nums) - k + 1):
-            median = nums[i]
-            for j in range(1, k):
-                if nums[i + j] > median:
-                    median = nums[i + j]
-            res.append(max)
-        return res
+    def medianSlidingWindow(self, nums, k: int):
+        result = []
+        max_heap, min_heap = [], []
+        removed_set = set()
+        self.max_heap_size, self.min_heap_size = 0, 0
 
-    def maxSlidingWindowDeque(self, nums, k):
-        res = []
-        q = collections.deque()
-        l = r = 0
+        for i, num in enumerate(nums):
+            self._add_number(max_heap, min_heap, num, i, removed_set)
 
-        while r < len(nums):
-            # pop smaller values from q
-            while q and nums[q[-1]] < nums[r]:
-                q.pop()
-            q.append(r)
+            if i < k - 1:
+                continue
 
-            # remove left val from window
-            if l > q[0]:
-                q.popleft()
+            if i > k - 1:
+                self._delete_number(max_heap, min_heap, removed_set, nums[i - k], i - k)
 
-            if (r + 1) >= k:
-                res.append(nums[q[0]])
-                l += 1
+            self._balance(max_heap, min_heap, removed_set)
+            self._pop_removed_items(max_heap, min_heap, removed_set)
+            if self.max_heap_size == self.min_heap_size + 1:
+                median = -max_heap[0][0]
+            else:
+                median = (-max_heap[0][0] + min_heap[0][0]) / 2
+            result.append(median)
 
-            r += 1
+        return result
 
-        return res
+    def _add_number(self, max_heap, min_heap, number, index, removed_set):
+        self._pop_removed_items(max_heap, min_heap, removed_set)
+        if not max_heap or (number, index) <= (-max_heap[0][0], -max_heap[0][1]):
+            heappush(max_heap, (-number, -index))
+            self.max_heap_size += 1
+        else:
+            heappush(min_heap, (number, index))
+            self.min_heap_size += 1
 
-    def maxSlidingWindowAVL(self, nums, k):
-        # creating the max heap, to get max element always
-        queue = []
+    def _delete_number(self, max_heap, min_heap, removed_set, number, index):
+        # it's guaranteed that max_heap is not empty
+        self._pop_removed_items(max_heap, min_heap, removed_set)
+        if (number, index) <= (-max_heap[0][0], -max_heap[0][1]):
+            removed_set.add((-number, -index))
+            self.max_heap_size -= 1
+        else:
+            removed_set.add((number, index))
+            self.min_heap_size -= 1
 
-        res = []
-        i = 0
+    def _balance(self, max_heap, min_heap, removed_set):
+        # at most one iteration in one of the while loops will be executed
+        while self.max_heap_size > self.min_heap_size + 1:
+            self._pop_removed_items(max_heap, min_heap, removed_set)
 
-        while i < k:
-            queue.append(nums[i])
-            i += 1
+            negative_number, negative_index = heappop(max_heap)
+            self.max_heap_size -= 1
 
-        queue.sort(reverse=True)
+            heappush(min_heap, (-negative_number, -negative_index))
+            self.min_heap_size += 1
 
-        # adding the maximum element among first k elements
-        res.append(queue[0])
+        while self.max_heap_size < self.min_heap_size:
+            self._pop_removed_items(max_heap, min_heap, removed_set)
 
-        # removing the first element of the array
-        queue.remove(nums[0])
+            number, index = heappop(min_heap)
+            self.min_heap_size -= 1
 
-        # iterating for the next elements
-        while i < len(nums):
-            # adding the new element in the window
-            queue.append(nums[i])
-            queue.sort(reverse=True)
+            heappush(max_heap, (-number, -index))
+            self.max_heap_size += 1
 
-            # finding & adding the max element in the
-            # current sliding window
-            res.append(queue[0])
+    def _pop_removed_items(self, max_heap, min_heap, removed_set):
+        while max_heap and max_heap[0] in removed_set:
+            heappop(max_heap)
 
-            # finally removing the first element from front end of queue
-            queue.remove(nums[i - k + 1])
-            i += 1
-        return res
+        while min_heap and min_heap[0] in removed_set:
+            heappop(min_heap)
+
