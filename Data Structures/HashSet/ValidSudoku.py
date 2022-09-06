@@ -3,6 +3,8 @@ Problem:
 -----------------------------------------------
 https://leetcode.com/problems/valid-sudoku/
 """
+
+
 class Solution:
     def isValidSudoku(self, board) -> bool:
         def is_valid_row(board):

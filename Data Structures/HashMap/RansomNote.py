@@ -9,7 +9,7 @@ Base Case:
 Check if ransomNote is grater than magazine if true return false.
 
 
-HashMap Solution:
+Hash Map Solution:
 -----------------------------------------------
 @description:
 Construct a dictionary of magazine's chars and freq

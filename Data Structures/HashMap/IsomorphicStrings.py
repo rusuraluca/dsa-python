@@ -9,11 +9,11 @@ Base Case:
 If len(s) != len(t) => return False
 
 
-Hash Table Solution:
+Hash Map Solution:
 -----------------------------------------------
 @description:
 Check base case
-Consider two hash tables for the two given strings
+Consider two hash maps for the two given strings
 st = {}
 ts = {}
 Traverse the given string s
@@ -23,7 +23,7 @@ Traverse the given string s
     or te is in te and ts[te] is different than se
         => return False
 
-    Update the hash table (dictionary)
+    Update the hash map (dictionary)
 
 Return True
 

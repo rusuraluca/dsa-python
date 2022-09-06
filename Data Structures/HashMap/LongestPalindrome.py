@@ -4,7 +4,7 @@ Problem:
 https://leetcode.com/problems/longest-palindrome/
 
 
-Hash Table Solution:
+Hash Map Solution:
 -----------------------------------------------
 @description:
 Construct a dictionary of given string's word freq

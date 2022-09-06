@@ -6,7 +6,7 @@ https://leetcode.com/problems/two-sum/
 
 Naive Solution:
 -----------------------------------------------
-traverse the input 2 times and check for target
+Traverse the input 2 times and check for target
 
 nums = [2,7,11,15]
 target = 9

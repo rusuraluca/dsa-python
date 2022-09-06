@@ -4,7 +4,7 @@ Problem:
 https://leetcode.com/problems/valid-anagram/
 
 
-HashTable Solution:
+Hash Map Solution:
 -----------------------------------------------
 @description:
 Using a dictionary
@@ -41,7 +41,7 @@ from collections import Counter
 
 
 class Solution:
-    def isAnagramHashTable(self, s: str, t: str) -> bool:
+    def isAnagramHashMap(self, s: str, t: str) -> bool:
 
         if len(s) != len(t):
             return False

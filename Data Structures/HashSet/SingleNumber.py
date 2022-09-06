@@ -11,7 +11,8 @@ Create a dictionary of each number's frequency.
 Check which element in the dictionary has the frequency 1 and return it.
 @complexity:
 Time:   O(n), we traverse once the n numbers in the array
-Space:  O(n), keep n/2+1 => n elements in the dictionary 
+Space:  O(n), keep n/2+1 => n elements in the dictionary
+
 
 XOR Solution:
 -----------------------------------------------
@@ -23,8 +24,8 @@ a XOR 0 = a
 0 XOR a = a
 
 if we take XOR of two same bits, it will return 0
-a XOR a = 0 
-a XOR b XOR a = (a XOR a) XOR b = 0 XOR b = b 
+a XOR a = 0
+a XOR b XOR a = (a XOR a) XOR b = 0 XOR b = b
 a  ⊕  b  ⊕  a = (a  ⊕  a)  ⊕  b = 0  ⊕  b = b
 
 So we can XOR all bits together to find the unique number.
@@ -54,8 +55,7 @@ The missing element is the difference between 2 times the sum of the set formed 
 
 @complexity:
 Time:   O(n), we traverse once the n numbers in the array
-Space:  O(n), keep n/2+1 => n elements in the set 
-
+Space:  O(n), keep n/2+1 => n elements in the set
 """
 
 
