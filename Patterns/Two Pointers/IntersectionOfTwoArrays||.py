@@ -4,7 +4,7 @@ Problem:
 https://leetcode.com/problems/intersection-of-two-arrays-ii/
 
 
-HashMap Solution:
+Hash Map Solution:
 -----------------------------------------------
 @description:
 Use a hashmap to record all nums appeared in the first list,

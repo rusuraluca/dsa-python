@@ -25,7 +25,7 @@ Time:   O(len(s)*len(t))
 Space:  O(s), where s=len(nums1), t=len(nums2)
 
 
-HashTable Solution:
+Hash Table Solution:
 -----------------------------------------------
 @description:
 Use a hashtable to record all nums appeared in the first list,
