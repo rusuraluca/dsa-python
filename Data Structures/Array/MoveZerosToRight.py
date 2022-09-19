@@ -1,29 +1,44 @@
 """
-As move zeros to left, but this time to right ;)
+Problem:
+-----------------------------------------------
+https://leetcode.com/problems/move-zeroes/
+
+
+Two Pointers Solution:
+-----------------------------------------------
+@description:
+Take two pointers,
+first pointing to the beginning of the array and the second to the end.
+Traverse once the elements, add at the beginning the non-zero elements.
+Now, the number of zero elements is the difference between the two pointers.
+Until they are equal we keep appending to the array zeros.
+Return the array
+
+@complexity:
+Time:   O(n), n is the length of the array
+Space:  O(1), no auxiliary space required
 """
 
 
-def move_zeros_to_right(array):
-    # Edge Case
-    if len(array) < 1:
-        return array
+class Solution:
+    def moveZeroesToEnd(self, nums) -> None:
+        # base case
+        if len(nums) < 1:
+            return nums
 
-    idx = 0
+        # two pointers
+        start = 0
+        end = len(nums)
 
-    len_arr = len(array) - 1
+        for i in range(end):
+            # add at the beginning the non-zero values
+            if nums[i] != 0:
+                nums[start] = nums[i]
+                start += 1
 
-    for i in range(len_arr):
-        if array[i] != 0:
-            array[idx] = array[i]
-            idx += 1
+        # add at the end the zero values
+        while start < end:
+            nums[start] = 0
+            start += 1
 
-    while idx < len_arr:
-        array[idx] = 0
-        idx += 1
-
-    return array
-
-
-array = [1, 10, 20, 0, 59, 63, 0, 88, 0]
-print(move_zeros_to_right(array))
-
+        return nums

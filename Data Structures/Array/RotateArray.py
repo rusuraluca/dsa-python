@@ -34,7 +34,7 @@ This approach is based on the fact that when we rotate the array k times,
 k%nk elements from the back end of the array come to the front
 and the rest of the elements from the front shift backwards.
 
-Ee firstly reverse all the elements of the array.
+We firstly reverse all the elements of the array.
 Then, reversing the first k elements followed by reversing the rest n-k elements gives us the required result.
 
 

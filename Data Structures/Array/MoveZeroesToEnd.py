@@ -21,7 +21,7 @@ Space:  O(1), no auxiliary space required
 
 
 class Solution:
-    def moveZeroes(self, nums) -> None:
+    def moveZeroesToEnd(self, nums) -> None:
         # base case
         if len(nums) < 1:
             return nums

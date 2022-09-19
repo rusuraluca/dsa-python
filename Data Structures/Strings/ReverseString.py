@@ -3,14 +3,15 @@ Problem:
 -----------------------------------------------
 https://leetcode.com/problems/reverse-string/
 
-Python string library doesn't support the in-built “reverse()” as done by other python containers like list,
+Python string library doesn't support the in-built “reverse()”
+as done by other python containers like list,
 hence knowing other methods to reverse string can prove to be useful.
 
 
 Two Pointers Solution:
 -----------------------------------------------
-@description:
 Iterative
+@description:
 Two pointers one to the start one to the end.
 Swap elements at pointers and increase pointers,
 until start pointer is greater than end pointer.
@@ -59,7 +60,8 @@ Extra Space Solution:
 -----------------------------------------------
 @description:
 We call the function to reverse a string, which iterates through every element
-and intelligently join each character in the beginning of a new string so as to obtain the reversed string.
+and intelligently join each character in the beginning of a new string
+so as to obtain the reversed string.
 
 @complexity:
 Time:   O(n), where n is the number of characters in the string
@@ -81,12 +83,12 @@ class Solution:
             s[l], s[-l-1] =  s[-l-1], s[l]
         """
 
-    def reverseRecursive(self, string) -> None:
+    def reverseStringRecursive(self, string) -> None:
         if len(string) == 0:
             return string
         # slice the part of the string except the first character
         # concatenate the first character to the end of the sliced string
-        return self.reverseRecursive(string[1:]) + string[0]
+        return self.reverseString(string[1:]) + string[0]
 
     def reverseStack(self, string) -> None:
         # function to create an empty stack
@@ -138,7 +140,7 @@ class Solution:
         string = "".join(reversed(string))
         return string
 
-    def reverseSpace(self, string):
+    def reverseStringSpace(self, string):
         new_string = ""
         for char in string:
             # add the char at the beginning
