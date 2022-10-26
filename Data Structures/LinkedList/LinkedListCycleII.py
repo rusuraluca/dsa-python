@@ -7,11 +7,11 @@ https://leetcode.com/problems/linked-list-cycle
 Hash Table Solution:
 -----------------------------------------------
 @description:
-consider a set to keep track of the visited nodes in a table where the value is the index
-traverse the linked list
-    if a node is marked as visited then return its index
-    otherwise, marked node as visited then continue
-return NILL
+Consider a set to keep track of the visited nodes in a table where the value is the index
+Traverse the linked list
+    If a node is marked as visited then return its index
+    Otherwise, marked node as visited then continue
+Return NULL
 
 @complexity:
 Time:  O(n),  for traversing once the n nodes in the linked list
@@ -23,7 +23,7 @@ Fast & Slow Pointer Solution:
 @description:
 Slow moves one step at a time, fast moves 2 steps.
 If they ever meet, means there was a cycle.
-While travering we keep a variable of the movement index of the slow pointer.
+While traversing we keep a variable of the movement index of the slow pointer.
 
 @complexity:
 Time:  O(n), for traversing once the n nodes in the linked list

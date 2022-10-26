@@ -134,7 +134,7 @@ It is the same as reversing the values in an Array in place (using the two-point
 """
 
 
-# Definition for singly-linked list.
+# definition for a singly-linked list
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val

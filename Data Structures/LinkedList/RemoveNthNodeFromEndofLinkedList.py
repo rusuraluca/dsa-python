@@ -37,7 +37,7 @@ Otherwise, once we successfully find the node before the target,
 we can then stitch it together with the node after the target, and then return head.
 
 @complexity:
-Time:   O(n), where n
+Time:   O(n), where n is the number of nodes in the list
 Space:  O(1), since we use constant extra space to track the next node
 """
 
@@ -54,9 +54,13 @@ class Solution:
         fast, slow = head, head
         for _ in range(n):
             fast = fast.next
+
         if not fast:
             return head.next
+
         while fast.next:
             fast, slow = fast.next, slow.next
+
         slow.next = slow.next.next
+
         return head

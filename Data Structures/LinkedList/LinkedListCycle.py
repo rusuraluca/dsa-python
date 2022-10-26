@@ -7,15 +7,16 @@ https://leetcode.com/problems/linked-list-cycle
 Hash Table Solution:
 -----------------------------------------------
 @description:
-consider a set to keep track of the visited nodes
-traverse the linked list
-    if a node is marked as visited then return the node
+Consider a set to keep track of the visited nodes
+Traverse the linked list
+    If a node is marked as visited then return the node
     otherwise, marked node as visited then continue
-return null
+Return NUll
 
 @complexity:
 Time:  O(n),  for traversing once the n nodes in the linked list
 Space: O(n), for the worst case to store in the set all the n nodes in the linked list
+
 
 @remember:
 In python,
@@ -24,10 +25,10 @@ In python,
   they can only contain unique items though
 
 
-Fast & Slow Pointer Solution:
+Fast & Slow Pointers Solution:
 -----------------------------------------------
 @description:
-Slow moves one step at a time, fast moves 2 steps.
+Slow moves one step at a time, fast moves 2 steps
 If they ever meet, means there was a cycle
 
 @complexity:
@@ -67,7 +68,7 @@ class Solution:
 
         return False
 
-    def hasCycleTwoPointers(self, head) -> bool:
+    def hasCycleFastandSlowPointers(self, head) -> bool:
         if not head or not head.next:
             return False
 

@@ -10,30 +10,26 @@ Given a potentially cyclical linked list where each value is unique, return the 
 If the list does not contain a cycle, return null.
 
 
-Hashing Solution:
+Hash Table Solution:
 -----------------------------------------------
 @description:
-consider a set to keep track of the visited nodes
-traverse the linked list
-    if a node is marked as visited then return the node
-    otherwise, marked node as visited then continue
-return null
+Consider a set to keep track of the visited nodes in a table where the value is the index
+Traverse the linked list
+    If a node is marked as visited then return its index
+    Otherwise, marked node as visited then continue
+Return NULL
 
 @complexity:
-Time:  O(n), for traversing once the n nodes in the linked list
+Time:  O(n),  for traversing once the n nodes in the linked list
 Space: O(n), for the worst case to store in the set all the n nodes in the linked list
-
-@remember:
-In python,
-- lists are slightly faster than sets when you just want to iterate over the values
-- sets, however, are significantly faster than lists if you want to check if an item is contained within it,
-  they can only contain unique items though
 
 
 Fast & Slow Pointer Solution:
 -----------------------------------------------
 @description:
-
+Slow moves one step at a time, fast moves 2 steps.
+If they ever meet, means there was a cycle.
+While traversing we keep a variable of the movement index of the slow pointer.
 
 @complexity:
 Time:  O(n), for traversing once the n nodes in the linked list

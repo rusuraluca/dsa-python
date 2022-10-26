@@ -40,12 +40,12 @@ class ListNode:
 
 class Solution:
     def middleNodeRecursive(self, slow, fast):
-        # Detect if fast pointer is at the end of the linked list
+        # detect if fast pointer is at the end of the linked list
         if not fast or fast.next:
-            # If fast is at the end, slow pointer must be at the middle
+            # if fast is at the end, slow pointer must be at the middle
             return slow
 
-        # Make recursive call
+        # make recursive call
         return self.middleNodeRecursive(slow.next, fast.next.next)
 
 
